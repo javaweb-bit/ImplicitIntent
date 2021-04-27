@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.implicitintent">
+
+    <!-- 보안상 민감한 기능 수행을 위해서는 권한 부여 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ImplicitIntent">
+        <!-- Activity 설정 -->
+        <activity android:name=".MainActivity">
+            <!-- Intent Filter: Activity 호출을 위해 필요한 액선, 카테고리 정보 -->
+            <intent-filter>
+                <!-- MAIN : 앱을 실행하면 시작되는 첫 번째 액티비티 -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
